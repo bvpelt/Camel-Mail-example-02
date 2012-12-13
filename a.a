@@ -1,0 +1,1021 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.camel:camel-example-reportincident:war:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 99, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building camel-example-reportincident Maven Webapp 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- cxf-codegen-plugin:2.6.1:wsdl2java (generate-sources) @ camel-example-reportincident ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ camel-example-reportincident ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ camel-example-reportincident ---
+[INFO] Compiling 1 source file to /home/bvpelt/workspace/camelex/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:testResources (default-testResources) @ camel-example-reportincident ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ camel-example-reportincident ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.7.2:test (default-test) @ camel-example-reportincident ---
+[INFO] Surefire report directory: /home/bvpelt/workspace/camelex/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.apache.camel.example.reportincident.ReportIncidentConsumerTest
+2012-12-13 17:24:57,879 [main] INFO  org.apache.camel.example.reportincident.ReportIncidentConsumerTest - >>> testConsumer <<<
+2012-12-13 17:24:57,888 [main] INFO  nl.bsoft.camelex.ReportIncidentEndpointImpl - >>> init <<<
+2012-12-13 17:24:57,927 [main] INFO  org.apache.camel.impl.DefaultCamelContext - JMX enabled. Using InstrumentationLifecycleStrategy.
+2012-12-13 17:24:57,954 [main] INFO  nl.bsoft.camelex.ReportIncidentRoutes - Configure route
+2012-12-13 17:24:58,019 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - Adding routes from: Routes: [Route[[From[direct:start]] -> [SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@5cbfe9d method: generateFilename]}], To[velocity:MailBody.vm], To[file://target/subfolder]]], Route[[From[file://target/subfolder]] -> [SetHeader[subject, {New incident reported}], To[smtp://someone@localhost?password=secret&to=incident@mycompany.com]]]] routes: []
+2012-12-13 17:24:58,093 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Starting JMX agent on server: com.sun.jmx.mbeanserver.JmxMBeanServer@464c4975
+2012-12-13 17:24:58,096 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,name=context
+2012-12-13 17:24:58,170 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,name=context
+2012-12-13 17:24:58,171 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,name=context
+2012-12-13 17:24:58,197 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: direct via type: org.apache.camel.component.direct.DirectComponent via META-INF/services/org/apache/camel/component/direct
+2012-12-13 17:24:58,201 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[direct:start], path=[start], parameters=[{}]
+2012-12-13 17:24:58,207 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - direct:start converted to endpoint: Endpoint[direct:start] by component: org.apache.camel.component.direct.DirectComponent@5bcdbf6
+2012-12-13 17:24:58,207 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="direct:start\?id=0xa639d9f6"
+2012-12-13 17:24:58,214 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="direct:start\?id=0xa639d9f6"
+2012-12-13 17:24:58,214 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="direct:start\?id=0xa639d9f6"
+2012-12-13 17:24:58,215 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=setHeader1,name="SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@5cbfe9d method: generateFilename]}]"
+2012-12-13 17:24:58,244 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=setHeader1,name="SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@5cbfe9d method: generateFilename]}]"
+2012-12-13 17:24:58,244 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=setHeader1,name="SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@5cbfe9d method: generateFilename]}]"
+2012-12-13 17:24:58,244 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=to1,name="To[velocity:MailBody.vm]"
+2012-12-13 17:24:58,265 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=to1,name="To[velocity:MailBody.vm]"
+2012-12-13 17:24:58,265 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=to1,name="To[velocity:MailBody.vm]"
+2012-12-13 17:24:58,266 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=to2,name="To[file://target/subfolder]"
+2012-12-13 17:24:58,286 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=to2,name="To[file://target/subfolder]"
+2012-12-13 17:24:58,286 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=to2,name="To[file://target/subfolder]"
+2012-12-13 17:24:58,297 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: velocity via type: org.apache.camel.component.velocity.VelocityComponent via META-INF/services/org/apache/camel/component/velocity
+2012-12-13 17:24:58,328 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[velocity:MailBody.vm], path=[MailBody.vm], parameters=[{}]
+2012-12-13 17:24:58,337 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - velocity:MailBody.vm converted to endpoint: Endpoint[velocity:MailBody.vm] by component: org.apache.camel.component.velocity.VelocityComponent@3f3f210f
+2012-12-13 17:24:58,337 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="velocity:MailBody.vm\?id=0xf0e74dac"
+2012-12-13 17:24:58,341 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="velocity:MailBody.vm\?id=0xf0e74dac"
+2012-12-13 17:24:58,341 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="velocity:MailBody.vm\?id=0xf0e74dac"
+2012-12-13 17:24:58,344 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: file via type: org.apache.camel.component.file.FileComponent via META-INF/services/org/apache/camel/component/file
+2012-12-13 17:24:58,344 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[file://target/subfolder], path=[target/subfolder], parameters=[{}]
+2012-12-13 17:24:58,346 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - file://target/subfolder converted to endpoint: Endpoint[file://target/subfolder] by component: org.apache.camel.component.file.FileComponent@23abcc03
+2012-12-13 17:24:58,346 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="file://target/subfolder\?id=0x92594747"
+2012-12-13 17:24:58,350 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="file://target/subfolder\?id=0x92594747"
+2012-12-13 17:24:58,351 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="file://target/subfolder\?id=0x92594747"
+2012-12-13 17:24:58,356 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=setHeader2,name="SetHeader[subject, {New incident reported}]"
+2012-12-13 17:24:58,386 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=setHeader2,name="SetHeader[subject, {New incident reported}]"
+2012-12-13 17:24:58,386 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=setHeader2,name="SetHeader[subject, {New incident reported}]"
+2012-12-13 17:24:58,386 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=to3,name="To[smtp://someone@localhost\?password=secret&to=incident@mycompany.com]"
+2012-12-13 17:24:58,404 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=to3,name="To[smtp://someone@localhost\?password=secret&to=incident@mycompany.com]"
+2012-12-13 17:24:58,405 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=processors,nodeid=to3,name="To[smtp://someone@localhost\?password=secret&to=incident@mycompany.com]"
+2012-12-13 17:24:58,409 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: smtp via type: org.apache.camel.component.mail.MailComponent via META-INF/services/org/apache/camel/component/smtp
+2012-12-13 17:24:58,419 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[smtp://someone@localhost?password=secret&to=incident@mycompany.com], path=[someone@localhost], parameters=[{to=incident@mycompany.com, password=secret}]
+2012-12-13 17:24:58,434 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - smtp://someone@localhost?password=secret&to=incident@mycompany.com converted to endpoint: Endpoint[smtp://someone@localhost?password=secret&to=incident@mycompany.com] by component: org.apache.camel.component.mail.MailComponent@2c8376b
+2012-12-13 17:24:58,435 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="smtp://someone@localhost\?id=0x72e2bb5f"
+2012-12-13 17:24:58,439 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="smtp://someone@localhost\?id=0x72e2bb5f"
+2012-12-13 17:24:58,439 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="smtp://someone@localhost\?id=0x72e2bb5f"
+2012-12-13 17:24:58,440 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=routes,name="node1"
+2012-12-13 17:24:58,468 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=routes,name="node1"
+2012-12-13 17:24:58,468 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=routes,name="node1"
+2012-12-13 17:24:58,468 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=routes,name="node2"
+2012-12-13 17:24:58,490 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=routes,name="node2"
+2012-12-13 17:24:58,490 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=routes,name="node2"
+2012-12-13 17:24:58,493 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=consumers,name=(0x48bd6a5f)
+2012-12-13 17:24:58,497 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=consumers,name=(0x48bd6a5f)
+2012-12-13 17:24:58,497 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=consumers,name=(0x48bd6a5f)
+2012-12-13 17:24:58,510 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=consumers,name=FileConsumer(0x559113f8)
+2012-12-13 17:24:58,514 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=consumers,name=FileConsumer(0x559113f8)
+2012-12-13 17:24:58,515 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=consumers,name=FileConsumer(0x559113f8)
+2012-12-13 17:24:58,552 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[file://target/subfolder?append=false], path=[target/subfolder], parameters=[{append=false}]
+2012-12-13 17:24:58,559 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> boolean with value: false
+2012-12-13 17:24:58,565 [main] DEBUG org.apache.camel.util.ResolverUtil - Searching for annotations of org.apache.camel.Converter in packages: [org.apache.camel.converter, org.apache.camel.component.mail, org.apache.camel.spring.converter]
+2012-12-13 17:24:58,571 [main] DEBUG org.apache.camel.util.ResolverUtil - Using only regular classloaders
+2012-12-13 17:24:58,572 [main] TRACE org.apache.camel.util.ResolverUtil - Searching for: annotated with @Converter in package: org/apache/camel/converter using classloader: sun.misc.Launcher$AppClassLoader osgi bundle classloader: false
+2012-12-13 17:24:58,572 [main] TRACE org.apache.camel.util.ResolverUtil - Getting resource URL for package: org/apache/camel/converter with classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,572 [main] TRACE org.apache.camel.util.ResolverUtil - URL from classloader: jar:file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar!/org/apache/camel/converter
+2012-12-13 17:24:58,572 [main] TRACE org.apache.camel.util.ResolverUtil - Decoded urlPath: file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar!/org/apache/camel/converter
+2012-12-13 17:24:58,573 [main] TRACE org.apache.camel.util.ResolverUtil - Scanning for classes in [/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar] matching criteria: annotated with @Converter
+2012-12-13 17:24:58,573 [main] DEBUG org.apache.camel.util.ResolverUtil - Loading from jar: /home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar
+2012-12-13 17:24:58,621 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CamelConverter$1 matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,622 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CamelConverter$2 matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,622 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CamelConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,625 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.CamelConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,626 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CollectionConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,627 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.CollectionConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,627 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.HasAnnotation matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,628 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.IOConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,630 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.IOConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,630 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.NIOConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,632 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.NIOConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,633 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ObjectConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,633 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.ObjectConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,633 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.BytesSource matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,634 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.DomConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,635 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.DomConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,636 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.StaxConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,637 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.StaxConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,637 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.StreamSourceConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,638 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.StreamSourceConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,638 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.StringSource matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,639 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.XmlConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,640 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.XmlConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,641 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCache matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,642 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter$InputStreamCache matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,643 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter$ReaderCache matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,643 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter$SourceCache matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,644 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,645 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.stream.StreamCacheConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,693 [main] TRACE org.apache.camel.util.ResolverUtil - URL from classloader: jar:file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar!/org/apache/camel/converter
+2012-12-13 17:24:58,693 [main] TRACE org.apache.camel.util.ResolverUtil - Decoded urlPath: file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar!/org/apache/camel/converter
+2012-12-13 17:24:58,693 [main] TRACE org.apache.camel.util.ResolverUtil - Scanning for classes in [/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar] matching criteria: annotated with @Converter
+2012-12-13 17:24:58,693 [main] DEBUG org.apache.camel.util.ResolverUtil - Loading from jar: /home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar
+2012-12-13 17:24:58,718 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CollectionConverterTest$1 matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,719 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CollectionConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,720 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ConverterTest$IntegerPropertyEditor matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,721 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,723 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.InstanceMethodWithExchangeTestConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,724 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.InstanceMethodWithExchangeTestConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,724 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.IOConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,725 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.JaxpTest matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,725 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.MyBean matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,726 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ObjectConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,727 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.StaticMethodWithExchangeTestConverter matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,727 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.StaticMethodWithExchangeTestConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,728 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,728 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.StringSourceTest matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,768 [main] DEBUG org.apache.camel.util.ResolverUtil - Using only regular classloaders
+2012-12-13 17:24:58,769 [main] TRACE org.apache.camel.util.ResolverUtil - Searching for: annotated with @Converter in package: org/apache/camel/component/mail using classloader: sun.misc.Launcher$AppClassLoader osgi bundle classloader: false
+2012-12-13 17:24:58,769 [main] TRACE org.apache.camel.util.ResolverUtil - Getting resource URL for package: org/apache/camel/component/mail with classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,769 [main] TRACE org.apache.camel.util.ResolverUtil - URL from classloader: jar:file:/home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar!/org/apache/camel/component/mail
+2012-12-13 17:24:58,769 [main] TRACE org.apache.camel.util.ResolverUtil - Decoded urlPath: file:/home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar!/org/apache/camel/component/mail
+2012-12-13 17:24:58,769 [main] TRACE org.apache.camel.util.ResolverUtil - Scanning for classes in [/home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar] matching criteria: annotated with @Converter
+2012-12-13 17:24:58,770 [main] DEBUG org.apache.camel.util.ResolverUtil - Loading from jar: /home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar
+2012-12-13 17:24:58,772 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailBinding matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,772 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailComponent matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,772 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConfiguration$1 matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,773 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConfiguration matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,773 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConsumer matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,774 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConverters matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,775 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.component.mail.MailConverters in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,775 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailEndpoint matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,775 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailExchange matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,776 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailMessage matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,778 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailProducer$1 matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,779 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailProducer matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,779 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailUtils matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,779 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.security.DummySSLSocketFactory matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,780 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.security.DummyTrustManager matches criteria [annotated with @Converter]
+2012-12-13 17:24:58,781 [main] DEBUG org.apache.camel.util.ResolverUtil - Using only regular classloaders
+2012-12-13 17:24:58,781 [main] TRACE org.apache.camel.util.ResolverUtil - Searching for: annotated with @Converter in package: org/apache/camel/spring/converter using classloader: sun.misc.Launcher$AppClassLoader osgi bundle classloader: false
+2012-12-13 17:24:58,782 [main] TRACE org.apache.camel.util.ResolverUtil - Getting resource URL for package: org/apache/camel/spring/converter with classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:24:58,782 [main] TRACE org.apache.camel.util.ResolverUtil - No URLs returned by classloader
+2012-12-13 17:24:58,782 [main] DEBUG org.apache.camel.util.ResolverUtil - Found: [class org.apache.camel.converter.CollectionConverter, class org.apache.camel.converter.jaxp.XmlConverter, class org.apache.camel.converter.jaxp.DomConverter, class org.apache.camel.converter.jaxp.StaxConverter, class org.apache.camel.converter.IOConverter, class org.apache.camel.converter.StaticMethodWithExchangeTestConverter, class org.apache.camel.converter.InstanceMethodWithExchangeTestConverter, class org.apache.camel.converter.jaxp.StreamSourceConverter, class org.apache.camel.converter.CamelConverter, class org.apache.camel.converter.stream.StreamCacheConverter, class org.apache.camel.converter.NIOConverter, class org.apache.camel.component.mail.MailConverters, class org.apache.camel.converter.ObjectConverter]
+2012-12-13 17:24:58,782 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.CollectionConverter
+2012-12-13 17:24:58,785 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.XmlConverter
+2012-12-13 17:24:58,793 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.DomConverter
+2012-12-13 17:24:58,794 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.StaxConverter
+2012-12-13 17:24:58,796 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.IOConverter
+2012-12-13 17:24:58,798 [main] WARN  org.apache.camel.impl.converter.DefaultTypeConverter - Overriding type converter from: InstanceMethodTypeConverter: public java.lang.String org.apache.camel.converter.jaxp.XmlConverter.toString(javax.xml.transform.Source) throws javax.xml.transform.TransformerException to: StaticMethodTypeConverter: public static java.lang.String org.apache.camel.converter.IOConverter.toString(javax.xml.transform.Source) throws javax.xml.transform.TransformerException,java.io.IOException
+2012-12-13 17:24:58,800 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.StaticMethodWithExchangeTestConverter
+2012-12-13 17:24:58,800 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.InstanceMethodWithExchangeTestConverter
+2012-12-13 17:24:58,800 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.StreamSourceConverter
+2012-12-13 17:24:58,801 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.CamelConverter
+2012-12-13 17:24:58,801 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.stream.StreamCacheConverter
+2012-12-13 17:24:58,802 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.NIOConverter
+2012-12-13 17:24:58,804 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.component.mail.MailConverters
+2012-12-13 17:24:58,804 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.ObjectConverter
+2012-12-13 17:24:58,808 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - file://target/subfolder?append=false converted to endpoint: Endpoint[file://target/subfolder?append=false] by component: org.apache.camel.component.file.FileComponent@23abcc03
+2012-12-13 17:24:58,808 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="file://target/subfolder\?id=0x99883c36"
+2012-12-13 17:24:58,812 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="file://target/subfolder\?id=0x99883c36"
+2012-12-13 17:24:58,813 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-1,type=endpoints,name="file://target/subfolder\?id=0x99883c36"
+2012-12-13 17:24:58,920 [main] DEBUG org.apache.camel.impl.ProducerCache - >>>> Endpoint[file://target/subfolder?append=false] Exchange[FileMessage: target/subfolder]
+2012-12-13 17:24:58,920 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: mail-incident-test.txt
+2012-12-13 17:24:58,921 [main] DEBUG org.apache.camel.component.file.FileProducer - About to write to: target/subfolder/mail-incident-test.txt from exchange: Exchange[FileMessage: target/subfolder]
+2012-12-13 17:24:58,924 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.io.InputStream with value: Hello World
+2012-12-13 17:24:58,930 [main] TRACE org.apache.camel.component.file.FileProducer - Using InputStream to transfer from: java.io.ByteArrayInputStream@37722456 to: sun.nio.ch.FileChannelImpl@26afa68a
+2012-12-13 17:24:59,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:24:59,541 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:24:59,541 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:24:59,541 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling file: target/subfolder/mail-incident-test.txt
+2012-12-13 17:24:59,542 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.FileConsumer - file:target/subfolder/mail-incident-test.txt isChanged:true sizeCheck:false(0) lastModifiedCheck:true(0)
+2012-12-13 17:24:59,546 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.FileEndpoint - Using file process strategy: org.apache.camel.component.file.strategy.RenameFileProcessStrategy@1eb3319f
+2012-12-13 17:24:59,547 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Waiting for exclusive read lock to file: target/subfolder/mail-incident-test.txt
+2012-12-13 17:24:59,548 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Acquired exclusive read lock: sun.nio.ch.FileLockImpl[0:9223372036854775807 exclusive valid] to file: target/subfolder/mail-incident-test.txt
+2012-12-13 17:24:59,549 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.FileConsumer - About to process file: target/subfolder/mail-incident-test.txt using exchange: Exchange[FileMessage: target/subfolder/mail-incident-test.txt]
+2012-12-13 17:24:59,549 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.strategy.FileProcessStrategySupport - Locking the file: target/subfolder/mail-incident-test.txt using the lock file name: /home/bvpelt/workspace/camelex/target/subfolder/mail-incident-test.txt.camelLock
+2012-12-13 17:24:59,553 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-0 >>> Exchange[FileMessage: target/subfolder/mail-incident-test.txt]
+2012-12-13 17:24:59,557 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 0.029264 millis for exchange: Exchange[FileMessage: target/subfolder/mail-incident-test.txt]
+2012-12-13 17:24:59,558 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-0 >>> Exchange[Message: target/subfolder/mail-incident-test.txt]
+2012-12-13 17:24:59,577 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.util.Date -> java.lang.String with value: Thu Dec 13 17:24:58 CET 2012
+2012-12-13 17:24:59,579 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: /home/bvpelt/workspace/camelex/target/subfolder/mail-incident-test.txt
+2012-12-13 17:24:59,580 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: mail-incident-test.txt
+2012-12-13 17:24:59,580 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.Long -> java.lang.String with value: 11
+2012-12-13 17:24:59,581 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: target/subfolder/mail-incident-test.txt
+2012-12-13 17:24:59,581 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: /home/bvpelt/workspace/camelex/target/subfolder/mail-incident-test.txt
+2012-12-13 17:24:59,581 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: New incident reported
+2012-12-13 17:24:59,581 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: target/subfolder
+2012-12-13 17:24:59,582 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: mail-incident-test.txt
+2012-12-13 17:24:59,582 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.io.File -> java.lang.String with value: target/subfolder/mail-incident-test.txt
+2012-12-13 17:24:59,594 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.mail.MailProducer - Sending MimeMessage: messageNumber=[0], from=[camel@localhost], to=[incident@mycompany.com], subject=[New incident reported]
+2012-12-13 17:24:59,622 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 64.152241 millis for exchange: Exchange[Message: target/subfolder/mail-incident-test.txt]
+2012-12-13 17:24:59,622 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.processor.Pipeline - Processing compelete for exchangeId: ID-pluto.universe.org/56662-1355415898818/0-0 >>> Exchange[Message: target/subfolder/mail-incident-test.txt]
+2012-12-13 17:24:59,629 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 70.036646 millis for exchange: Exchange[FileMessage: target/subfolder/mail-incident-test.txt]
+2012-12-13 17:24:59,629 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.FileConsumer - Done processing file: target/subfolder/mail-incident-test.txt. Status is: processed OK
+2012-12-13 17:24:59,630 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.FileConsumer - Committing file strategy: org.apache.camel.component.file.strategy.RenameFileProcessStrategy@1eb3319f for file: target/subfolder/mail-incident-test.txt
+2012-12-13 17:24:59,630 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.strategy.RenameFileProcessStrategy - Renaming file: target/subfolder/mail-incident-test.txt to: target/subfolder/.camel/mail-incident-test.txt
+2012-12-13 17:24:59,630 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting sun.nio.ch.FileLockImpl -> java.nio.channels.FileLock with value: sun.nio.ch.FileLockImpl[0:9223372036854775807 exclusive valid]
+2012-12-13 17:24:59,631 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: /home/bvpelt/workspace/camelex/target/subfolder/mail-incident-test.txt.camelLock
+2012-12-13 17:24:59,631 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.strategy.FileProcessStrategySupport - Unlocking file: target/subfolder/mail-incident-test.txt
+2012-12-13 17:24:59,631 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.strategy.FileProcessStrategySupport - Deleting lock file: /home/bvpelt/workspace/camelex/target/subfolder/mail-incident-test.txt.camelLock
+2012-12-13 17:25:00,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:00,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:00,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:00,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:00,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:00,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:01,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:01,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:01,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:01,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:01,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:01,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.156 sec
+Running org.apache.camel.example.reportincident.ReportIncidentRoutesTest
+2012-12-13 17:25:01,963 [main] INFO  org.apache.camel.impl.DefaultCamelContext - JMX enabled. Using InstrumentationLifecycleStrategy.
+2012-12-13 17:25:01,963 [main] DEBUG org.apache.camel.example.reportincident.ReportIncidentRoutesTest - Using created route builder: Routes: []
+2012-12-13 17:25:01,964 [main] INFO  nl.bsoft.camelex.ReportIncidentRoutes - Configure route
+2012-12-13 17:25:01,964 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - Adding routes from: Routes: [Route[[From[direct:start]] -> [SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@4a738d08 method: generateFilename]}], To[velocity:MailBody.vm], To[file://target/subfolder]]], Route[[From[file://target/subfolder]] -> [SetHeader[subject, {New incident reported}], To[smtp://someone@localhost?password=secret&to=incident@mycompany.com]]]] routes: []
+2012-12-13 17:25:01,965 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Starting JMX agent on server: com.sun.jmx.mbeanserver.JmxMBeanServer@464c4975
+2012-12-13 17:25:01,965 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,name=context
+2012-12-13 17:25:01,970 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,name=context
+2012-12-13 17:25:01,971 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,name=context
+2012-12-13 17:25:01,973 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: direct via type: org.apache.camel.component.direct.DirectComponent via META-INF/services/org/apache/camel/component/direct
+2012-12-13 17:25:01,973 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[direct:start], path=[start], parameters=[{}]
+2012-12-13 17:25:01,973 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - direct:start converted to endpoint: Endpoint[direct:start] by component: org.apache.camel.component.direct.DirectComponent@2eb0a3f5
+2012-12-13 17:25:01,974 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="direct:start\?id=0xa639d9f6"
+2012-12-13 17:25:01,979 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="direct:start\?id=0xa639d9f6"
+2012-12-13 17:25:01,979 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="direct:start\?id=0xa639d9f6"
+2012-12-13 17:25:01,979 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=setHeader3,name="SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@4a738d08 method: generateFilename]}]"
+2012-12-13 17:25:01,996 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=setHeader3,name="SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@4a738d08 method: generateFilename]}]"
+2012-12-13 17:25:01,996 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=setHeader3,name="SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@4a738d08 method: generateFilename]}]"
+2012-12-13 17:25:01,997 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=to4,name="To[velocity:MailBody.vm]"
+2012-12-13 17:25:02,013 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=to4,name="To[velocity:MailBody.vm]"
+2012-12-13 17:25:02,014 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=to4,name="To[velocity:MailBody.vm]"
+2012-12-13 17:25:02,014 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=to5,name="To[file://target/subfolder]"
+2012-12-13 17:25:02,030 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=to5,name="To[file://target/subfolder]"
+2012-12-13 17:25:02,030 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=to5,name="To[file://target/subfolder]"
+2012-12-13 17:25:02,031 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: velocity via type: org.apache.camel.component.velocity.VelocityComponent via META-INF/services/org/apache/camel/component/velocity
+2012-12-13 17:25:02,031 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[velocity:MailBody.vm], path=[MailBody.vm], parameters=[{}]
+2012-12-13 17:25:02,031 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - velocity:MailBody.vm converted to endpoint: Endpoint[velocity:MailBody.vm] by component: org.apache.camel.component.velocity.VelocityComponent@2830ae41
+2012-12-13 17:25:02,032 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="velocity:MailBody.vm\?id=0xf0e74dac"
+2012-12-13 17:25:02,036 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="velocity:MailBody.vm\?id=0xf0e74dac"
+2012-12-13 17:25:02,036 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="velocity:MailBody.vm\?id=0xf0e74dac"
+2012-12-13 17:25:02,036 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: file via type: org.apache.camel.component.file.FileComponent via META-INF/services/org/apache/camel/component/file
+2012-12-13 17:25:02,037 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[file://target/subfolder], path=[target/subfolder], parameters=[{}]
+2012-12-13 17:25:02,037 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - file://target/subfolder converted to endpoint: Endpoint[file://target/subfolder] by component: org.apache.camel.component.file.FileComponent@552c8fa8
+2012-12-13 17:25:02,037 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="file://target/subfolder\?id=0x92594747"
+2012-12-13 17:25:02,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:02,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:02,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:02,041 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="file://target/subfolder\?id=0x92594747"
+2012-12-13 17:25:02,041 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="file://target/subfolder\?id=0x92594747"
+2012-12-13 17:25:02,042 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=setHeader4,name="SetHeader[subject, {New incident reported}]"
+2012-12-13 17:25:02,057 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=setHeader4,name="SetHeader[subject, {New incident reported}]"
+2012-12-13 17:25:02,057 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=setHeader4,name="SetHeader[subject, {New incident reported}]"
+2012-12-13 17:25:02,057 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=to6,name="To[smtp://someone@localhost\?password=secret&to=incident@mycompany.com]"
+2012-12-13 17:25:02,071 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=to6,name="To[smtp://someone@localhost\?password=secret&to=incident@mycompany.com]"
+2012-12-13 17:25:02,072 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=processors,nodeid=to6,name="To[smtp://someone@localhost\?password=secret&to=incident@mycompany.com]"
+2012-12-13 17:25:02,072 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: smtp via type: org.apache.camel.component.mail.MailComponent via META-INF/services/org/apache/camel/component/smtp
+2012-12-13 17:25:02,074 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[smtp://someone@localhost?password=secret&to=incident@mycompany.com], path=[someone@localhost], parameters=[{to=incident@mycompany.com, password=secret}]
+2012-12-13 17:25:02,074 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - smtp://someone@localhost?password=secret&to=incident@mycompany.com converted to endpoint: Endpoint[smtp://someone@localhost?password=secret&to=incident@mycompany.com] by component: org.apache.camel.component.mail.MailComponent@3d47358f
+2012-12-13 17:25:02,074 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="smtp://someone@localhost\?id=0x72e2bb5f"
+2012-12-13 17:25:02,078 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="smtp://someone@localhost\?id=0x72e2bb5f"
+2012-12-13 17:25:02,078 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=endpoints,name="smtp://someone@localhost\?id=0x72e2bb5f"
+2012-12-13 17:25:02,078 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=routes,name="node3"
+2012-12-13 17:25:02,095 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=routes,name="node3"
+2012-12-13 17:25:02,096 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=routes,name="node3"
+2012-12-13 17:25:02,096 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=routes,name="node4"
+2012-12-13 17:25:02,113 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=routes,name="node4"
+2012-12-13 17:25:02,113 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=routes,name="node4"
+2012-12-13 17:25:02,113 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=consumers,name=(0x76027982)
+2012-12-13 17:25:02,116 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=consumers,name=(0x76027982)
+2012-12-13 17:25:02,116 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=consumers,name=(0x76027982)
+2012-12-13 17:25:02,117 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=consumers,name=FileConsumer(0x1c778255)
+2012-12-13 17:25:02,120 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=consumers,name=FileConsumer(0x1c778255)
+2012-12-13 17:25:02,120 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-2,type=consumers,name=FileConsumer(0x1c778255)
+2012-12-13 17:25:02,124 [main] DEBUG org.apache.camel.example.reportincident.ReportIncidentRoutesTest - Routing Rules are: [EventDrivenConsumerRoute[Endpoint[direct:start] -> Delegate(Delegate(Pipeline[DeadLetterChannel[Delegate(setHeader(org.apache.camel.file.name, BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@4a738d08 method: generateFilename])), RecipientList[log:org.apache.camel.DeadLetterChannel?level=error]], DeadLetterChannel[Delegate(sendTo(Endpoint[velocity:MailBody.vm])), RecipientList[log:org.apache.camel.DeadLetterChannel?level=error]], DeadLetterChannel[Delegate(sendTo(Endpoint[file://target/subfolder])), RecipientList[log:org.apache.camel.DeadLetterChannel?level=error]]]))], EventDrivenConsumerRoute[Endpoint[file://target/subfolder] -> Delegate(Delegate(Pipeline[DeadLetterChannel[Delegate(setHeader(subject, New incident reported)), RecipientList[log:org.apache.camel.DeadLetterChannel?level=error]], DeadLetterChannel[Delegate(sendTo(Endpoint[smtp://someone@localhost?password=secret&to=incident@mycompany.com])), RecipientList[log:org.apache.camel.DeadLetterChannel?level=error]]]))]]
+2012-12-13 17:25:02,126 [main] DEBUG org.apache.camel.impl.ProducerCache - >>>> Endpoint[direct:start] Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@784a7df6]
+2012-12-13 17:25:02,128 [main] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-1 >>> Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@784a7df6]
+2012-12-13 17:25:02,133 [main] TRACE org.apache.camel.component.bean.BeanInfo - Introspecting class: class nl.bsoft.camelex.FilenameGenerator
+2012-12-13 17:25:02,133 [main] TRACE org.apache.camel.component.bean.BeanInfo - Introspecting class: class nl.bsoft.camelex.FilenameGenerator, method: public java.lang.String nl.bsoft.camelex.FilenameGenerator.generateFilename(org.apache.camel.example.reportincident.InputReportIncident)
+2012-12-13 17:25:02,138 [main] TRACE org.apache.camel.component.bean.BeanInfo - Adding operation: generateFilename for method: public java.lang.String nl.bsoft.camelex.FilenameGenerator.generateFilename(org.apache.camel.example.reportincident.InputReportIncident)
+2012-12-13 17:25:02,138 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting nl.bsoft.camelex.FilenameGenerator -> org.apache.camel.Processor with value: nl.bsoft.camelex.FilenameGenerator@4a738d08
+2012-12-13 17:25:02,140 [main] DEBUG org.apache.camel.util.ResolverUtil - Searching for annotations of org.apache.camel.Converter in packages: [org.apache.camel.converter, org.apache.camel.component.mail, org.apache.camel.spring.converter]
+2012-12-13 17:25:02,141 [main] DEBUG org.apache.camel.util.ResolverUtil - Using only regular classloaders
+2012-12-13 17:25:02,141 [main] TRACE org.apache.camel.util.ResolverUtil - Searching for: annotated with @Converter in package: org/apache/camel/converter using classloader: sun.misc.Launcher$AppClassLoader osgi bundle classloader: false
+2012-12-13 17:25:02,141 [main] TRACE org.apache.camel.util.ResolverUtil - Getting resource URL for package: org/apache/camel/converter with classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,141 [main] TRACE org.apache.camel.util.ResolverUtil - URL from classloader: jar:file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar!/org/apache/camel/converter
+2012-12-13 17:25:02,141 [main] TRACE org.apache.camel.util.ResolverUtil - Decoded urlPath: file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar!/org/apache/camel/converter
+2012-12-13 17:25:02,141 [main] TRACE org.apache.camel.util.ResolverUtil - Scanning for classes in [/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar] matching criteria: annotated with @Converter
+2012-12-13 17:25:02,141 [main] DEBUG org.apache.camel.util.ResolverUtil - Loading from jar: /home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar
+2012-12-13 17:25:02,167 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CamelConverter$1 matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,167 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CamelConverter$2 matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,167 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CamelConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,167 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.CamelConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,167 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CollectionConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,168 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.CollectionConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,168 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.HasAnnotation matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,168 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.IOConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,168 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.IOConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,169 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.NIOConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,169 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.NIOConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,169 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ObjectConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,169 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.ObjectConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,170 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.BytesSource matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,170 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.DomConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,170 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.DomConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,170 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.StaxConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,170 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.StaxConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,171 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.StreamSourceConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,171 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.StreamSourceConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,171 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.StringSource matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,171 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.XmlConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,171 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.XmlConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,172 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCache matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,172 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter$InputStreamCache matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,172 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter$ReaderCache matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,173 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter$SourceCache matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,173 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,173 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.stream.StreamCacheConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,210 [main] TRACE org.apache.camel.util.ResolverUtil - URL from classloader: jar:file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar!/org/apache/camel/converter
+2012-12-13 17:25:02,210 [main] TRACE org.apache.camel.util.ResolverUtil - Decoded urlPath: file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar!/org/apache/camel/converter
+2012-12-13 17:25:02,210 [main] TRACE org.apache.camel.util.ResolverUtil - Scanning for classes in [/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar] matching criteria: annotated with @Converter
+2012-12-13 17:25:02,210 [main] DEBUG org.apache.camel.util.ResolverUtil - Loading from jar: /home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar
+2012-12-13 17:25:02,229 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CollectionConverterTest$1 matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,229 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CollectionConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,229 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ConverterTest$IntegerPropertyEditor matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,230 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,230 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.InstanceMethodWithExchangeTestConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,230 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.InstanceMethodWithExchangeTestConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,230 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.IOConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,230 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.JaxpTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,231 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.MyBean matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,231 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ObjectConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,231 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.StaticMethodWithExchangeTestConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,231 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.StaticMethodWithExchangeTestConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,231 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,231 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.StringSourceTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,257 [main] DEBUG org.apache.camel.util.ResolverUtil - Using only regular classloaders
+2012-12-13 17:25:02,257 [main] TRACE org.apache.camel.util.ResolverUtil - Searching for: annotated with @Converter in package: org/apache/camel/component/mail using classloader: sun.misc.Launcher$AppClassLoader osgi bundle classloader: false
+2012-12-13 17:25:02,257 [main] TRACE org.apache.camel.util.ResolverUtil - Getting resource URL for package: org/apache/camel/component/mail with classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,257 [main] TRACE org.apache.camel.util.ResolverUtil - URL from classloader: jar:file:/home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar!/org/apache/camel/component/mail
+2012-12-13 17:25:02,257 [main] TRACE org.apache.camel.util.ResolverUtil - Decoded urlPath: file:/home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar!/org/apache/camel/component/mail
+2012-12-13 17:25:02,258 [main] TRACE org.apache.camel.util.ResolverUtil - Scanning for classes in [/home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar] matching criteria: annotated with @Converter
+2012-12-13 17:25:02,258 [main] DEBUG org.apache.camel.util.ResolverUtil - Loading from jar: /home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar
+2012-12-13 17:25:02,259 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailBinding matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,259 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailComponent matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,259 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConfiguration$1 matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,260 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConfiguration matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,260 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConsumer matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,260 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConverters matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,260 [main] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.component.mail.MailConverters in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,260 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailEndpoint matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,260 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailExchange matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,260 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailMessage matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,261 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailProducer$1 matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,261 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailProducer matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,261 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailUtils matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,261 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.security.DummySSLSocketFactory matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,261 [main] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.security.DummyTrustManager matches criteria [annotated with @Converter]
+2012-12-13 17:25:02,261 [main] DEBUG org.apache.camel.util.ResolverUtil - Using only regular classloaders
+2012-12-13 17:25:02,261 [main] TRACE org.apache.camel.util.ResolverUtil - Searching for: annotated with @Converter in package: org/apache/camel/spring/converter using classloader: sun.misc.Launcher$AppClassLoader osgi bundle classloader: false
+2012-12-13 17:25:02,261 [main] TRACE org.apache.camel.util.ResolverUtil - Getting resource URL for package: org/apache/camel/spring/converter with classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:02,262 [main] TRACE org.apache.camel.util.ResolverUtil - No URLs returned by classloader
+2012-12-13 17:25:02,262 [main] DEBUG org.apache.camel.util.ResolverUtil - Found: [class org.apache.camel.converter.CollectionConverter, class org.apache.camel.converter.jaxp.XmlConverter, class org.apache.camel.converter.jaxp.DomConverter, class org.apache.camel.converter.jaxp.StaxConverter, class org.apache.camel.converter.IOConverter, class org.apache.camel.converter.StaticMethodWithExchangeTestConverter, class org.apache.camel.converter.InstanceMethodWithExchangeTestConverter, class org.apache.camel.converter.jaxp.StreamSourceConverter, class org.apache.camel.converter.CamelConverter, class org.apache.camel.converter.stream.StreamCacheConverter, class org.apache.camel.converter.NIOConverter, class org.apache.camel.component.mail.MailConverters, class org.apache.camel.converter.ObjectConverter]
+2012-12-13 17:25:02,262 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.CollectionConverter
+2012-12-13 17:25:02,263 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.XmlConverter
+2012-12-13 17:25:02,265 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.DomConverter
+2012-12-13 17:25:02,265 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.StaxConverter
+2012-12-13 17:25:02,266 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.IOConverter
+2012-12-13 17:25:02,266 [main] WARN  org.apache.camel.impl.converter.DefaultTypeConverter - Overriding type converter from: InstanceMethodTypeConverter: public java.lang.String org.apache.camel.converter.jaxp.XmlConverter.toString(javax.xml.transform.Source) throws javax.xml.transform.TransformerException to: StaticMethodTypeConverter: public static java.lang.String org.apache.camel.converter.IOConverter.toString(javax.xml.transform.Source) throws javax.xml.transform.TransformerException,java.io.IOException
+2012-12-13 17:25:02,267 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.StaticMethodWithExchangeTestConverter
+2012-12-13 17:25:02,267 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.InstanceMethodWithExchangeTestConverter
+2012-12-13 17:25:02,268 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.StreamSourceConverter
+2012-12-13 17:25:02,268 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.CamelConverter
+2012-12-13 17:25:02,268 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.stream.StreamCacheConverter
+2012-12-13 17:25:02,268 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.NIOConverter
+2012-12-13 17:25:02,269 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.component.mail.MailConverters
+2012-12-13 17:25:02,269 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.ObjectConverter
+2012-12-13 17:25:02,272 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting org.apache.camel.example.reportincident.InputReportIncident -> org.apache.camel.component.bean.BeanInvocation with value: org.apache.camel.example.reportincident.InputReportIncident@784a7df6
+2012-12-13 17:25:02,273 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting org.apache.camel.impl.DefaultMessage -> org.apache.camel.component.bean.BeanInvocation with value: Message: org.apache.camel.example.reportincident.InputReportIncident@784a7df6
+2012-12-13 17:25:02,273 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting null -> java.lang.String with value: null
+2012-12-13 17:25:02,273 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: generateFilename
+2012-12-13 17:25:02,273 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.Boolean -> java.lang.Boolean with value: false
+2012-12-13 17:25:02,273 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting org.apache.camel.example.reportincident.InputReportIncident -> org.apache.camel.example.reportincident.InputReportIncident with value: org.apache.camel.example.reportincident.InputReportIncident@784a7df6
+2012-12-13 17:25:02,273 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting org.apache.camel.example.reportincident.InputReportIncident -> org.apache.camel.example.reportincident.InputReportIncident with value: org.apache.camel.example.reportincident.InputReportIncident@784a7df6
+2012-12-13 17:25:02,274 [main] TRACE org.apache.camel.component.bean.MethodInfo - >>>> invoking: public java.lang.String nl.bsoft.camelex.FilenameGenerator.generateFilename(org.apache.camel.example.reportincident.InputReportIncident) on bean: nl.bsoft.camelex.FilenameGenerator@4a738d08 with arguments: {org.apache.camel.example.reportincident.InputReportIncident@784a7df6} for exchange: Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@784a7df6]
+2012-12-13 17:25:02,274 [main] DEBUG org.apache.camel.component.bean.BeanProcessor - Setting bean invocation result on the OUT message: incident-123.txt
+2012-12-13 17:25:02,274 [main] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 146.113652 millis for exchange: Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@784a7df6]
+2012-12-13 17:25:02,274 [main] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-1 >>> Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@784a7df6]
+2012-12-13 17:25:02,274 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loading resource: MailBody.vm using: org.springframework.core.io.DefaultResourceLoader@7a70610a
+2012-12-13 17:25:02,283 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - SimpleLog4JLogSystem using category 'org.apache.camel.component.velocity.VelocityEndpoint'
+2012-12-13 17:25:02,283 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - *******************************************************************
+2012-12-13 17:25:02,283 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2012-12-13 17:25:02,283 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - RuntimeInstance initializing.
+2012-12-13 17:25:02,283 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2012-12-13 17:25:02,283 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2012-12-13 17:25:02,283 [main] INFO  org.apache.camel.component.velocity.VelocityEndpoint - LogSystem has been deprecated. Please use a LogChute implementation.
+2012-12-13 17:25:02,285 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2012-12-13 17:25:02,289 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2012-12-13 17:25:02,290 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - FileResourceLoader : initialization starting.
+2012-12-13 17:25:02,290 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Do unicode file recognition:  false
+2012-12-13 17:25:02,290 [main] INFO  org.apache.camel.component.velocity.VelocityEndpoint - FileResourceLoader : adding path '.'
+2012-12-13 17:25:02,290 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - FileResourceLoader : initialization complete.
+2012-12-13 17:25:02,300 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2012-12-13 17:25:02,300 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Default ResourceManager initialization complete.
+2012-12-13 17:25:02,301 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2012-12-13 17:25:02,302 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2012-12-13 17:25:02,304 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2012-12-13 17:25:02,305 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2012-12-13 17:25:02,305 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2012-12-13 17:25:02,329 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Created '20' parsers.
+2012-12-13 17:25:02,334 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : initialization starting.
+2012-12-13 17:25:02,334 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2012-12-13 17:25:02,335 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : Default library not found.
+2012-12-13 17:25:02,335 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2012-12-13 17:25:02,335 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2012-12-13 17:25:02,335 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2012-12-13 17:25:02,335 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2012-12-13 17:25:02,335 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : Velocimacro : initialization complete.
+2012-12-13 17:25:02,335 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - RuntimeInstance successfully initialized.
+2012-12-13 17:25:02,335 [main] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocity is evaluating using velocity context: {headers={org.apache.camel.file.name=incident-123.txt}, body=org.apache.camel.example.reportincident.InputReportIncident@784a7df6, camelContext=org.apache.camel.impl.DefaultCamelContext@48e29820, request=Message: org.apache.camel.example.reportincident.InputReportIncident@784a7df6, in=Message: org.apache.camel.example.reportincident.InputReportIncident@784a7df6, exchange=Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@784a7df6]}
+2012-12-13 17:25:02,347 [main] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 72.540582 millis for exchange: Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@784a7df6]
+2012-12-13 17:25:02,347 [main] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-1 >>> Exchange[Message: Incident 123 has been reported on the 2008-07-16 by Claus Ibsen.
+
+The person can be contact by:
+- email: davsclaus@apache.org
+- phone: +45 2962 7576
+
+Summary: bla bla
+
+Details:
+more bla bla
+
+This is an auto generated email. You can not reply.]
+2012-12-13 17:25:02,347 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: incident-123.txt
+2012-12-13 17:25:02,348 [main] DEBUG org.apache.camel.component.file.FileProducer - About to write to: target/subfolder/incident-123.txt from exchange: Exchange[FileMessage: target/subfolder]
+2012-12-13 17:25:02,348 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.io.InputStream with value: Incident 123 has been reported on the 2008-07-16 by Claus Ibsen.
+
+The person can be contact by:
+- email: davsclaus@apache.org
+- phone: +45 2962 7576
+
+Summary: bla bla
+
+Details:
+more bla bla
+
+This is an auto generated email. You can not reply.
+2012-12-13 17:25:02,348 [main] TRACE org.apache.camel.component.file.FileProducer - Using InputStream to transfer from: java.io.ByteArrayInputStream@5bd6fbb3 to: sun.nio.ch.FileChannelImpl@7f26d3df
+2012-12-13 17:25:02,348 [main] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 1.074184 millis for exchange: Exchange[Message: Incident 123 has been reported on the 2008-07-16 by Claus Ibsen.
+
+The person can be contact by:
+- email: davsclaus@apache.org
+- phone: +45 2962 7576
+
+Summary: bla bla
+
+Details:
+more bla bla
+
+This is an auto generated email. You can not reply.]
+2012-12-13 17:25:02,348 [main] TRACE org.apache.camel.processor.Pipeline - Processing compelete for exchangeId: ID-pluto.universe.org/56662-1355415898818/0-1 >>> Exchange[Message: Incident 123 has been reported on the 2008-07-16 by Claus Ibsen.
+
+The person can be contact by:
+- email: davsclaus@apache.org
+- phone: +45 2962 7576
+
+Summary: bla bla
+
+Details:
+more bla bla
+
+This is an auto generated email. You can not reply.]
+2012-12-13 17:25:02,348 [main] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 220.659843 millis for exchange: Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@784a7df6]
+2012-12-13 17:25:02,348 [main] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: Incident 123 has been reported on the 2008-07-16 by Claus Ibsen.
+
+The person can be contact by:
+- email: davsclaus@apache.org
+- phone: +45 2962 7576
+
+Summary: bla bla
+
+Details:
+more bla bla
+
+This is an auto generated email. You can not reply.
+2012-12-13 17:25:02,349 [main] DEBUG org.apache.camel.example.reportincident.ReportIncidentRoutesTest - tearDown test: testTransformMailBody
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.401 sec
+Running org.apache.camel.example.reportincident.ReportIncidentEndpointTest
+2012-12-13 17:25:02,354 [main] INFO  org.apache.camel.example.reportincident.ReportIncidentEndpointTest - >>> testRendportIncident <<<
+2012-12-13 17:25:02,354 [main] INFO  org.apache.camel.example.reportincident.ReportIncidentEndpointTest - >>> startServer <<<
+2012-12-13 17:25:02,354 [main] INFO  nl.bsoft.camelex.ReportIncidentEndpointImpl - >>> init <<<
+2012-12-13 17:25:02,354 [main] INFO  org.apache.camel.impl.DefaultCamelContext - JMX enabled. Using InstrumentationLifecycleStrategy.
+2012-12-13 17:25:02,354 [main] INFO  nl.bsoft.camelex.ReportIncidentRoutes - Configure route
+2012-12-13 17:25:02,355 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - Adding routes from: Routes: [Route[[From[direct:start]] -> [SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@609903f4 method: generateFilename]}], To[velocity:MailBody.vm], To[file://target/subfolder]]], Route[[From[file://target/subfolder]] -> [SetHeader[subject, {New incident reported}], To[smtp://someone@localhost?password=secret&to=incident@mycompany.com]]]] routes: []
+2012-12-13 17:25:02,355 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Starting JMX agent on server: com.sun.jmx.mbeanserver.JmxMBeanServer@464c4975
+2012-12-13 17:25:02,355 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,name=context
+2012-12-13 17:25:02,359 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,name=context
+2012-12-13 17:25:02,359 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,name=context
+2012-12-13 17:25:02,360 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: direct via type: org.apache.camel.component.direct.DirectComponent via META-INF/services/org/apache/camel/component/direct
+2012-12-13 17:25:02,360 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[direct:start], path=[start], parameters=[{}]
+2012-12-13 17:25:02,360 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - direct:start converted to endpoint: Endpoint[direct:start] by component: org.apache.camel.component.direct.DirectComponent@5dd2b9b7
+2012-12-13 17:25:02,360 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="direct:start\?id=0xa639d9f6"
+2012-12-13 17:25:02,363 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="direct:start\?id=0xa639d9f6"
+2012-12-13 17:25:02,363 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="direct:start\?id=0xa639d9f6"
+2012-12-13 17:25:02,364 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=setHeader5,name="SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@609903f4 method: generateFilename]}]"
+2012-12-13 17:25:02,375 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=setHeader5,name="SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@609903f4 method: generateFilename]}]"
+2012-12-13 17:25:02,375 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=setHeader5,name="SetHeader[org.apache.camel.file.name, {BeanExpression[bean:nl.bsoft.camelex.FilenameGenerator@609903f4 method: generateFilename]}]"
+2012-12-13 17:25:02,375 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=to7,name="To[velocity:MailBody.vm]"
+2012-12-13 17:25:02,385 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=to7,name="To[velocity:MailBody.vm]"
+2012-12-13 17:25:02,385 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=to7,name="To[velocity:MailBody.vm]"
+2012-12-13 17:25:02,385 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=to8,name="To[file://target/subfolder]"
+2012-12-13 17:25:02,395 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=to8,name="To[file://target/subfolder]"
+2012-12-13 17:25:02,395 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=to8,name="To[file://target/subfolder]"
+2012-12-13 17:25:02,395 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: velocity via type: org.apache.camel.component.velocity.VelocityComponent via META-INF/services/org/apache/camel/component/velocity
+2012-12-13 17:25:02,395 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[velocity:MailBody.vm], path=[MailBody.vm], parameters=[{}]
+2012-12-13 17:25:02,395 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - velocity:MailBody.vm converted to endpoint: Endpoint[velocity:MailBody.vm] by component: org.apache.camel.component.velocity.VelocityComponent@741827d1
+2012-12-13 17:25:02,395 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="velocity:MailBody.vm\?id=0xf0e74dac"
+2012-12-13 17:25:02,398 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="velocity:MailBody.vm\?id=0xf0e74dac"
+2012-12-13 17:25:02,398 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="velocity:MailBody.vm\?id=0xf0e74dac"
+2012-12-13 17:25:02,398 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: file via type: org.apache.camel.component.file.FileComponent via META-INF/services/org/apache/camel/component/file
+2012-12-13 17:25:02,398 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[file://target/subfolder], path=[target/subfolder], parameters=[{}]
+2012-12-13 17:25:02,398 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - file://target/subfolder converted to endpoint: Endpoint[file://target/subfolder] by component: org.apache.camel.component.file.FileComponent@2bbe2893
+2012-12-13 17:25:02,399 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="file://target/subfolder\?id=0x92594747"
+2012-12-13 17:25:02,401 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="file://target/subfolder\?id=0x92594747"
+2012-12-13 17:25:02,401 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="file://target/subfolder\?id=0x92594747"
+2012-12-13 17:25:02,402 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=setHeader6,name="SetHeader[subject, {New incident reported}]"
+2012-12-13 17:25:02,411 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=setHeader6,name="SetHeader[subject, {New incident reported}]"
+2012-12-13 17:25:02,412 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=setHeader6,name="SetHeader[subject, {New incident reported}]"
+2012-12-13 17:25:02,412 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=to9,name="To[smtp://someone@localhost\?password=secret&to=incident@mycompany.com]"
+2012-12-13 17:25:02,421 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=to9,name="To[smtp://someone@localhost\?password=secret&to=incident@mycompany.com]"
+2012-12-13 17:25:02,422 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=processors,nodeid=to9,name="To[smtp://someone@localhost\?password=secret&to=incident@mycompany.com]"
+2012-12-13 17:25:02,422 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: smtp via type: org.apache.camel.component.mail.MailComponent via META-INF/services/org/apache/camel/component/smtp
+2012-12-13 17:25:02,422 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[smtp://someone@localhost?password=secret&to=incident@mycompany.com], path=[someone@localhost], parameters=[{to=incident@mycompany.com, password=secret}]
+2012-12-13 17:25:02,422 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - smtp://someone@localhost?password=secret&to=incident@mycompany.com converted to endpoint: Endpoint[smtp://someone@localhost?password=secret&to=incident@mycompany.com] by component: org.apache.camel.component.mail.MailComponent@1167e3a5
+2012-12-13 17:25:02,422 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="smtp://someone@localhost\?id=0x72e2bb5f"
+2012-12-13 17:25:02,425 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="smtp://someone@localhost\?id=0x72e2bb5f"
+2012-12-13 17:25:02,425 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=endpoints,name="smtp://someone@localhost\?id=0x72e2bb5f"
+2012-12-13 17:25:02,425 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=routes,name="node5"
+2012-12-13 17:25:02,445 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=routes,name="node5"
+2012-12-13 17:25:02,445 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=routes,name="node5"
+2012-12-13 17:25:02,446 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=routes,name="node6"
+2012-12-13 17:25:02,456 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=routes,name="node6"
+2012-12-13 17:25:02,456 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=routes,name="node6"
+2012-12-13 17:25:02,456 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=consumers,name=(0x6f18278a)
+2012-12-13 17:25:02,458 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=consumers,name=(0x6f18278a)
+2012-12-13 17:25:02,459 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=consumers,name=(0x6f18278a)
+2012-12-13 17:25:02,459 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=consumers,name=FileConsumer(0x4aab7165)
+2012-12-13 17:25:02,461 [main] TRACE org.apache.camel.management.DefaultInstrumentationAgent - Registering MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=consumers,name=FileConsumer(0x4aab7165)
+2012-12-13 17:25:02,461 [main] DEBUG org.apache.camel.management.DefaultInstrumentationAgent - Registered MBean with objectname: org.apache.camel:context=pluto.universe.org/camel-3,type=consumers,name=FileConsumer(0x4aab7165)
+2012-12-13 17:25:02,549 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:02,550 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:02,550 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:02,550 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling file: target/subfolder/incident-123.txt
+2012-12-13 17:25:02,550 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.FileConsumer - file:target/subfolder/incident-123.txt isChanged:true sizeCheck:false(0) lastModifiedCheck:true(0)
+2012-12-13 17:25:02,551 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Waiting for exclusive read lock to file: target/subfolder/incident-123.txt
+2012-12-13 17:25:02,551 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Acquired exclusive read lock: sun.nio.ch.FileLockImpl[0:9223372036854775807 exclusive valid] to file: target/subfolder/incident-123.txt
+2012-12-13 17:25:02,551 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.FileConsumer - About to process file: target/subfolder/incident-123.txt using exchange: Exchange[FileMessage: target/subfolder/incident-123.txt]
+2012-12-13 17:25:02,551 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.strategy.FileProcessStrategySupport - Locking the file: target/subfolder/incident-123.txt using the lock file name: /home/bvpelt/workspace/camelex/target/subfolder/incident-123.txt.camelLock
+2012-12-13 17:25:02,551 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-2 >>> Exchange[FileMessage: target/subfolder/incident-123.txt]
+2012-12-13 17:25:02,551 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 0.00447 millis for exchange: Exchange[FileMessage: target/subfolder/incident-123.txt]
+2012-12-13 17:25:02,551 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-2 >>> Exchange[Message: target/subfolder/incident-123.txt]
+2012-12-13 17:25:02,552 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.util.Date -> java.lang.String with value: Thu Dec 13 17:25:02 CET 2012
+2012-12-13 17:25:02,556 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: /home/bvpelt/workspace/camelex/target/subfolder/incident-123.txt
+2012-12-13 17:25:02,559 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: incident-123.txt
+2012-12-13 17:25:02,559 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.Long -> java.lang.String with value: 242
+2012-12-13 17:25:02,560 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: target/subfolder/incident-123.txt
+2012-12-13 17:25:02,560 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: /home/bvpelt/workspace/camelex/target/subfolder/incident-123.txt
+2012-12-13 17:25:02,560 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: New incident reported
+2012-12-13 17:25:02,560 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: target/subfolder
+2012-12-13 17:25:02,560 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: incident-123.txt
+2012-12-13 17:25:02,561 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.io.File -> java.lang.String with value: target/subfolder/incident-123.txt
+2012-12-13 17:25:02,561 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.mail.MailProducer - Sending MimeMessage: messageNumber=[0], from=[camel@localhost], to=[incident@mycompany.com], subject=[New incident reported]
+2012-12-13 17:25:02,564 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 12.318962 millis for exchange: Exchange[Message: target/subfolder/incident-123.txt]
+2012-12-13 17:25:02,564 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.processor.Pipeline - Processing compelete for exchangeId: ID-pluto.universe.org/56662-1355415898818/0-2 >>> Exchange[Message: target/subfolder/incident-123.txt]
+2012-12-13 17:25:02,568 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 12.891255 millis for exchange: Exchange[FileMessage: target/subfolder/incident-123.txt]
+2012-12-13 17:25:02,568 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.FileConsumer - Done processing file: target/subfolder/incident-123.txt. Status is: processed OK
+2012-12-13 17:25:02,569 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.FileConsumer - Committing file strategy: org.apache.camel.component.file.strategy.RenameFileProcessStrategy@1eb3319f for file: target/subfolder/incident-123.txt
+2012-12-13 17:25:02,569 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.strategy.RenameFileProcessStrategy - Renaming file: target/subfolder/incident-123.txt to: target/subfolder/.camel/incident-123.txt
+2012-12-13 17:25:02,569 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting sun.nio.ch.FileLockImpl -> java.nio.channels.FileLock with value: sun.nio.ch.FileLockImpl[0:9223372036854775807 exclusive valid]
+2012-12-13 17:25:02,569 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: /home/bvpelt/workspace/camelex/target/subfolder/incident-123.txt.camelLock
+2012-12-13 17:25:02,569 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.component.file.strategy.FileProcessStrategySupport - Unlocking file: target/subfolder/incident-123.txt
+2012-12-13 17:25:02,570 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.strategy.FileProcessStrategySupport - Deleting lock file: /home/bvpelt/workspace/camelex/target/subfolder/incident-123.txt.camelLock
+Dec 13, 2012 5:25:02 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFO: Creating Service {http://camelex.bsoft.nl/}ReportIncidentEndpointImplService from class org.apache.camel.example.reportincident.ReportIncidentEndpoint
+2012-12-13 17:25:03,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:03,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:03,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:03,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:03,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:03,465 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:03,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:03,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:03,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+Dec 13, 2012 5:25:03 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFO: Setting the server's publish address to be http://localhost:9090/unittest
+2012-12-13 17:25:03.618:INFO:oejs.Server:jetty-7.5.4.v20111024
+2012-12-13 17:25:03.649:INFO:oejs.AbstractConnector:Started SelectChannelConnector@localhost:9090 STARTING
+2012-12-13 17:25:03.674:INFO:oejsh.ContextHandler:started o.e.j.s.h.ContextHandler{,null}
+2012-12-13 17:25:03,675 [main] INFO  org.apache.camel.example.reportincident.ReportIncidentEndpointTest - >>> createCXFClient <<<
+Dec 13, 2012 5:25:03 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFO: Creating Service {http://reportincident.example.camel.apache.org}ReportIncidentEndpointService from class org.apache.camel.example.reportincident.ReportIncidentEndpoint
+2012-12-13 17:25:03,945 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.ProducerCache - >>>> Endpoint[direct:start] Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95]
+2012-12-13 17:25:03,945 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-3 >>> Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95]
+2012-12-13 17:25:03,945 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.component.bean.BeanInfo - Introspecting class: class nl.bsoft.camelex.FilenameGenerator
+2012-12-13 17:25:03,945 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.component.bean.BeanInfo - Introspecting class: class nl.bsoft.camelex.FilenameGenerator, method: public java.lang.String nl.bsoft.camelex.FilenameGenerator.generateFilename(org.apache.camel.example.reportincident.InputReportIncident)
+2012-12-13 17:25:03,945 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.component.bean.BeanInfo - Adding operation: generateFilename for method: public java.lang.String nl.bsoft.camelex.FilenameGenerator.generateFilename(org.apache.camel.example.reportincident.InputReportIncident)
+2012-12-13 17:25:03,945 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting nl.bsoft.camelex.FilenameGenerator -> org.apache.camel.Processor with value: nl.bsoft.camelex.FilenameGenerator@609903f4
+2012-12-13 17:25:03,947 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.util.ResolverUtil - Searching for annotations of org.apache.camel.Converter in packages: [org.apache.camel.converter, org.apache.camel.component.mail, org.apache.camel.spring.converter]
+2012-12-13 17:25:03,947 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.util.ResolverUtil - Using only regular classloaders
+2012-12-13 17:25:03,947 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Searching for: annotated with @Converter in package: org/apache/camel/converter using classloader: sun.misc.Launcher$AppClassLoader osgi bundle classloader: false
+2012-12-13 17:25:03,947 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Getting resource URL for package: org/apache/camel/converter with classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:03,947 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - URL from classloader: jar:file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar!/org/apache/camel/converter
+2012-12-13 17:25:03,947 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Decoded urlPath: file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar!/org/apache/camel/converter
+2012-12-13 17:25:03,948 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Scanning for classes in [/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar] matching criteria: annotated with @Converter
+2012-12-13 17:25:03,948 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.util.ResolverUtil - Loading from jar: /home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0.jar
+2012-12-13 17:25:03,962 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CamelConverter$1 matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,962 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CamelConverter$2 matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,962 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CamelConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,962 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.CamelConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:03,962 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CollectionConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,963 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.CollectionConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:03,963 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.HasAnnotation matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,963 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.IOConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,963 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.IOConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:03,963 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.NIOConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,963 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.NIOConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:03,963 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ObjectConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,963 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.ObjectConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:03,964 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.BytesSource matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,964 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.DomConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:03,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:03,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:03,964 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.DomConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:03,965 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.StaxConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,965 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.StaxConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:03,965 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.StreamSourceConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,965 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.StreamSourceConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:03,965 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.StringSource matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,965 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.jaxp.XmlConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,965 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.jaxp.XmlConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:03,965 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCache matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,966 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter$InputStreamCache matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,966 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter$ReaderCache matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,966 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter$SourceCache matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,966 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:03,966 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.stream.StreamCacheConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:03,989 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - URL from classloader: jar:file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar!/org/apache/camel/converter
+2012-12-13 17:25:03,989 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Decoded urlPath: file:/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar!/org/apache/camel/converter
+2012-12-13 17:25:03,989 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Scanning for classes in [/home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar] matching criteria: annotated with @Converter
+2012-12-13 17:25:03,989 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.util.ResolverUtil - Loading from jar: /home/bvpelt/.m2/repository/org/apache/camel/camel-core/1.5.0/camel-core-1.5.0-tests.jar
+2012-12-13 17:25:04,010 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CollectionConverterTest$1 matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,010 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.CollectionConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,010 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ConverterTest$IntegerPropertyEditor matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,010 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,011 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.InstanceMethodWithExchangeTestConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,011 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.InstanceMethodWithExchangeTestConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:04,011 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.IOConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,011 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.JaxpTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,011 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.MyBean matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,011 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.ObjectConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,012 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.StaticMethodWithExchangeTestConverter matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,012 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.converter.StaticMethodWithExchangeTestConverter in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:04,012 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.stream.StreamCacheConverterTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,012 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.converter.StringSourceTest matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:04,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:04,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:04,045 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.util.ResolverUtil - Using only regular classloaders
+2012-12-13 17:25:04,045 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Searching for: annotated with @Converter in package: org/apache/camel/component/mail using classloader: sun.misc.Launcher$AppClassLoader osgi bundle classloader: false
+2012-12-13 17:25:04,045 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Getting resource URL for package: org/apache/camel/component/mail with classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:04,045 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - URL from classloader: jar:file:/home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar!/org/apache/camel/component/mail
+2012-12-13 17:25:04,045 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Decoded urlPath: file:/home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar!/org/apache/camel/component/mail
+2012-12-13 17:25:04,045 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Scanning for classes in [/home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar] matching criteria: annotated with @Converter
+2012-12-13 17:25:04,046 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.util.ResolverUtil - Loading from jar: /home/bvpelt/.m2/repository/org/apache/camel/camel-mail/1.5.0/camel-mail-1.5.0.jar
+2012-12-13 17:25:04,047 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailBinding matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,048 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailComponent matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,048 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConfiguration$1 matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,048 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConfiguration matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,048 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConsumer matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,049 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailConverters matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,049 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Found class: class org.apache.camel.component.mail.MailConverters in classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:04,049 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailEndpoint matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,049 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailExchange matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,049 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailMessage matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,049 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailProducer$1 matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,050 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailProducer matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,050 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.MailUtils matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,050 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.security.DummySSLSocketFactory matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,050 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Testing for class org.apache.camel.component.mail.security.DummyTrustManager matches criteria [annotated with @Converter]
+2012-12-13 17:25:04,051 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.util.ResolverUtil - Using only regular classloaders
+2012-12-13 17:25:04,051 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Searching for: annotated with @Converter in package: org/apache/camel/spring/converter using classloader: sun.misc.Launcher$AppClassLoader osgi bundle classloader: false
+2012-12-13 17:25:04,051 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - Getting resource URL for package: org/apache/camel/spring/converter with classloader: sun.misc.Launcher$AppClassLoader@6d6f0472
+2012-12-13 17:25:04,051 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.util.ResolverUtil - No URLs returned by classloader
+2012-12-13 17:25:04,051 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.util.ResolverUtil - Found: [class org.apache.camel.converter.CollectionConverter, class org.apache.camel.converter.jaxp.XmlConverter, class org.apache.camel.converter.jaxp.DomConverter, class org.apache.camel.converter.jaxp.StaxConverter, class org.apache.camel.converter.IOConverter, class org.apache.camel.converter.StaticMethodWithExchangeTestConverter, class org.apache.camel.converter.InstanceMethodWithExchangeTestConverter, class org.apache.camel.converter.jaxp.StreamSourceConverter, class org.apache.camel.converter.CamelConverter, class org.apache.camel.converter.stream.StreamCacheConverter, class org.apache.camel.converter.NIOConverter, class org.apache.camel.component.mail.MailConverters, class org.apache.camel.converter.ObjectConverter]
+2012-12-13 17:25:04,051 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.CollectionConverter
+2012-12-13 17:25:04,052 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.XmlConverter
+2012-12-13 17:25:04,055 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.DomConverter
+2012-12-13 17:25:04,056 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.StaxConverter
+2012-12-13 17:25:04,057 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.IOConverter
+2012-12-13 17:25:04,057 [qtp1146025520-17 - /unittest] WARN  org.apache.camel.impl.converter.DefaultTypeConverter - Overriding type converter from: InstanceMethodTypeConverter: public java.lang.String org.apache.camel.converter.jaxp.XmlConverter.toString(javax.xml.transform.Source) throws javax.xml.transform.TransformerException to: StaticMethodTypeConverter: public static java.lang.String org.apache.camel.converter.IOConverter.toString(javax.xml.transform.Source) throws javax.xml.transform.TransformerException,java.io.IOException
+2012-12-13 17:25:04,059 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.StaticMethodWithExchangeTestConverter
+2012-12-13 17:25:04,059 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.InstanceMethodWithExchangeTestConverter
+2012-12-13 17:25:04,059 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.jaxp.StreamSourceConverter
+2012-12-13 17:25:04,060 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.CamelConverter
+2012-12-13 17:25:04,060 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.stream.StreamCacheConverter
+2012-12-13 17:25:04,061 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.NIOConverter
+2012-12-13 17:25:04,062 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.component.mail.MailConverters
+2012-12-13 17:25:04,062 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading converter class: org.apache.camel.converter.ObjectConverter
+2012-12-13 17:25:04,064 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting org.apache.camel.example.reportincident.InputReportIncident -> org.apache.camel.component.bean.BeanInvocation with value: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95
+2012-12-13 17:25:04,064 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting org.apache.camel.impl.DefaultMessage -> org.apache.camel.component.bean.BeanInvocation with value: Message: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95
+2012-12-13 17:25:04,065 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting null -> java.lang.String with value: null
+2012-12-13 17:25:04,065 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: generateFilename
+2012-12-13 17:25:04,065 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.Boolean -> java.lang.Boolean with value: false
+2012-12-13 17:25:04,065 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting org.apache.camel.example.reportincident.InputReportIncident -> org.apache.camel.example.reportincident.InputReportIncident with value: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95
+2012-12-13 17:25:04,065 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting org.apache.camel.example.reportincident.InputReportIncident -> org.apache.camel.example.reportincident.InputReportIncident with value: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95
+2012-12-13 17:25:04,065 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.component.bean.MethodInfo - >>>> invoking: public java.lang.String nl.bsoft.camelex.FilenameGenerator.generateFilename(org.apache.camel.example.reportincident.InputReportIncident) on bean: nl.bsoft.camelex.FilenameGenerator@609903f4 with arguments: {org.apache.camel.example.reportincident.InputReportIncident@28d4ff95} for exchange: Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95]
+2012-12-13 17:25:04,065 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.bean.BeanProcessor - Setting bean invocation result on the OUT message: incident-123.txt
+2012-12-13 17:25:04,065 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 120.388278 millis for exchange: Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95]
+2012-12-13 17:25:04,066 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-3 >>> Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95]
+2012-12-13 17:25:04,066 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loading resource: MailBody.vm using: org.springframework.core.io.DefaultResourceLoader@17510d96
+2012-12-13 17:25:04,069 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - SimpleLog4JLogSystem using category 'org.apache.camel.component.velocity.VelocityEndpoint'
+2012-12-13 17:25:04,069 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - *******************************************************************
+2012-12-13 17:25:04,069 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2012-12-13 17:25:04,069 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - RuntimeInstance initializing.
+2012-12-13 17:25:04,069 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2012-12-13 17:25:04,069 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2012-12-13 17:25:04,069 [qtp1146025520-17 - /unittest] INFO  org.apache.camel.component.velocity.VelocityEndpoint - LogSystem has been deprecated. Please use a LogChute implementation.
+2012-12-13 17:25:04,070 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2012-12-13 17:25:04,070 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2012-12-13 17:25:04,070 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - FileResourceLoader : initialization starting.
+2012-12-13 17:25:04,071 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Do unicode file recognition:  false
+2012-12-13 17:25:04,072 [qtp1146025520-17 - /unittest] INFO  org.apache.camel.component.velocity.VelocityEndpoint - FileResourceLoader : adding path '.'
+2012-12-13 17:25:04,072 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - FileResourceLoader : initialization complete.
+2012-12-13 17:25:04,073 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2012-12-13 17:25:04,073 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Default ResourceManager initialization complete.
+2012-12-13 17:25:04,073 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2012-12-13 17:25:04,074 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2012-12-13 17:25:04,074 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2012-12-13 17:25:04,074 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2012-12-13 17:25:04,074 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2012-12-13 17:25:04,076 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Created '20' parsers.
+2012-12-13 17:25:04,076 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : initialization starting.
+2012-12-13 17:25:04,076 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2012-12-13 17:25:04,076 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : Default library not found.
+2012-12-13 17:25:04,077 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2012-12-13 17:25:04,077 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2012-12-13 17:25:04,077 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2012-12-13 17:25:04,077 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2012-12-13 17:25:04,077 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocimacro : Velocimacro : initialization complete.
+2012-12-13 17:25:04,077 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - RuntimeInstance successfully initialized.
+2012-12-13 17:25:04,077 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.velocity.VelocityEndpoint - Velocity is evaluating using velocity context: {headers={org.apache.camel.file.name=incident-123.txt}, body=org.apache.camel.example.reportincident.InputReportIncident@28d4ff95, camelContext=org.apache.camel.impl.DefaultCamelContext@41aef798, request=Message: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95, in=Message: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95, exchange=Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95]}
+2012-12-13 17:25:04,079 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 13.186479 millis for exchange: Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95]
+2012-12-13 17:25:04,079 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-3 >>> Exchange[Message: Incident 123 has been reported on the 2008-07-16 by Claus Ibsen.
+
+The person can be contact by:
+- email: davsclaus@apache.org
+- phone: +45 2962 7576
+
+Summary: bla bla
+
+Details:
+more bla bla
+
+This is an auto generated email. You can not reply.]
+2012-12-13 17:25:04,079 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: incident-123.txt
+2012-12-13 17:25:04,080 [qtp1146025520-17 - /unittest] DEBUG org.apache.camel.component.file.FileProducer - About to write to: target/subfolder/incident-123.txt from exchange: Exchange[FileMessage: target/subfolder]
+2012-12-13 17:25:04,080 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.io.InputStream with value: Incident 123 has been reported on the 2008-07-16 by Claus Ibsen.
+
+The person can be contact by:
+- email: davsclaus@apache.org
+- phone: +45 2962 7576
+
+Summary: bla bla
+
+Details:
+more bla bla
+
+This is an auto generated email. You can not reply.
+2012-12-13 17:25:04,080 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.component.file.FileProducer - Using InputStream to transfer from: java.io.ByteArrayInputStream@12260d8d to: sun.nio.ch.FileChannelImpl@43ad4a
+2012-12-13 17:25:04,080 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 1.014118 millis for exchange: Exchange[Message: Incident 123 has been reported on the 2008-07-16 by Claus Ibsen.
+
+The person can be contact by:
+- email: davsclaus@apache.org
+- phone: +45 2962 7576
+
+Summary: bla bla
+
+Details:
+more bla bla
+
+This is an auto generated email. You can not reply.]
+2012-12-13 17:25:04,080 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.processor.Pipeline - Processing compelete for exchangeId: ID-pluto.universe.org/56662-1355415898818/0-3 >>> Exchange[Message: Incident 123 has been reported on the 2008-07-16 by Claus Ibsen.
+
+The person can be contact by:
+- email: davsclaus@apache.org
+- phone: +45 2962 7576
+
+Summary: bla bla
+
+Details:
+more bla bla
+
+This is an auto generated email. You can not reply.]
+2012-12-13 17:25:04,080 [qtp1146025520-17 - /unittest] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 135.527284 millis for exchange: Exchange[Message: org.apache.camel.example.reportincident.InputReportIncident@28d4ff95]
+Body:Incident 123 has been reported on the 2008-07-16 by Claus Ibsen.
+
+The person can be contact by:
+- email: davsclaus@apache.org
+- phone: +45 2962 7576
+
+Summary: bla bla
+
+Details:
+more bla bla
+
+This is an auto generated email. You can not reply.
+2012-12-13 17:25:04,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:04,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:04,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:04,465 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling file: target/subfolder/incident-123.txt
+2012-12-13 17:25:04,465 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.component.file.FileConsumer - file:target/subfolder/incident-123.txt isChanged:true sizeCheck:false(0) lastModifiedCheck:true(0)
+2012-12-13 17:25:04,466 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.component.file.FileEndpoint - Using file process strategy: org.apache.camel.component.file.strategy.RenameFileProcessStrategy@235dc721
+2012-12-13 17:25:04,466 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Waiting for exclusive read lock to file: target/subfolder/incident-123.txt
+2012-12-13 17:25:04,466 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Acquired exclusive read lock: sun.nio.ch.FileLockImpl[0:9223372036854775807 exclusive valid] to file: target/subfolder/incident-123.txt
+2012-12-13 17:25:04,466 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.component.file.FileConsumer - About to process file: target/subfolder/incident-123.txt using exchange: Exchange[FileMessage: target/subfolder/incident-123.txt]
+2012-12-13 17:25:04,466 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.component.file.strategy.FileProcessStrategySupport - Locking the file: target/subfolder/incident-123.txt using the lock file name: /home/bvpelt/workspace/camelex/target/subfolder/incident-123.txt.camelLock
+2012-12-13 17:25:04,466 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-4 >>> Exchange[FileMessage: target/subfolder/incident-123.txt]
+2012-12-13 17:25:04,467 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 0.005098 millis for exchange: Exchange[FileMessage: target/subfolder/incident-123.txt]
+2012-12-13 17:25:04,467 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.processor.Pipeline - Processing exchangeId: ID-pluto.universe.org/56662-1355415898818/0-4 >>> Exchange[Message: target/subfolder/incident-123.txt]
+2012-12-13 17:25:04,468 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.util.Date -> java.lang.String with value: Thu Dec 13 17:25:04 CET 2012
+2012-12-13 17:25:04,469 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: /home/bvpelt/workspace/camelex/target/subfolder/incident-123.txt
+2012-12-13 17:25:04,469 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: incident-123.txt
+2012-12-13 17:25:04,469 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.Long -> java.lang.String with value: 242
+2012-12-13 17:25:04,470 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: target/subfolder/incident-123.txt
+2012-12-13 17:25:04,470 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: /home/bvpelt/workspace/camelex/target/subfolder/incident-123.txt
+2012-12-13 17:25:04,470 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: New incident reported
+2012-12-13 17:25:04,471 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: target/subfolder
+2012-12-13 17:25:04,471 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: incident-123.txt
+2012-12-13 17:25:04,471 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.io.File -> java.lang.String with value: target/subfolder/incident-123.txt
+2012-12-13 17:25:04,471 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.component.mail.MailProducer - Sending MimeMessage: messageNumber=[0], from=[camel@localhost], to=[incident@mycompany.com], subject=[New incident reported]
+2012-12-13 17:25:04,474 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 6.80689 millis for exchange: Exchange[Message: target/subfolder/incident-123.txt]
+2012-12-13 17:25:04,474 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.processor.Pipeline - Processing compelete for exchangeId: ID-pluto.universe.org/56662-1355415898818/0-4 >>> Exchange[Message: target/subfolder/incident-123.txt]
+2012-12-13 17:25:04,474 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.management.InstrumentationProcessor - Recording duration: 7.475285 millis for exchange: Exchange[FileMessage: target/subfolder/incident-123.txt]
+2012-12-13 17:25:04,474 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.component.file.FileConsumer - Done processing file: target/subfolder/incident-123.txt. Status is: processed OK
+2012-12-13 17:25:04,474 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.component.file.FileConsumer - Committing file strategy: org.apache.camel.component.file.strategy.RenameFileProcessStrategy@235dc721 for file: target/subfolder/incident-123.txt
+2012-12-13 17:25:04,474 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.component.file.strategy.RenameFileProcessStrategy - Renaming file: target/subfolder/incident-123.txt to: target/subfolder/.camel/incident-123.txt
+2012-12-13 17:25:04,474 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting sun.nio.ch.FileLockImpl -> java.nio.channels.FileLock with value: sun.nio.ch.FileLockImpl[0:9223372036854775807 exclusive valid]
+2012-12-13 17:25:04,475 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.impl.converter.DefaultTypeConverter - Converting java.lang.String -> java.lang.String with value: /home/bvpelt/workspace/camelex/target/subfolder/incident-123.txt.camelLock
+2012-12-13 17:25:04,475 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.component.file.strategy.FileProcessStrategySupport - Unlocking file: target/subfolder/incident-123.txt
+2012-12-13 17:25:04,475 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.strategy.FileProcessStrategySupport - Deleting lock file: /home/bvpelt/workspace/camelex/target/subfolder/incident-123.txt.camelLock
+2012-12-13 17:25:04,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:04,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:04,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:04,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:04,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:04,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:05,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:05,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:05,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:05,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:05,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:05,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:05,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:05,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:05,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:05,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:05,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:05,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:06,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:06,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:06,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:06,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:06,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:06,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:06,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:06,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:06,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:06,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:06,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:06,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:07,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:07,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:07,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:07,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:07,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:07,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:07,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:07,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:07,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:07,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:07,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:07,965 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:08,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:08,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:08,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:08,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:08,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:08,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:08,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:08,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:08,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:08,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:08,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:08,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:09,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:09,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:09,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:09,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:09,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:09,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:09,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:09,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:09,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:09,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:09,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:09,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:10,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:10,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:10,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:10,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:10,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:10,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:10,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:10,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:10,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:10,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:10,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:10,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:11,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:11,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:11,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:11,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:11,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:11,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:11,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:11,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:11,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:11,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:11,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:11,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:12,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:12,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:12,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:12,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:12,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:12,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:12,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:12,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:12,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:12,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:12,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:12,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:13,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:13,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:13,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:13,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:13,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:13,464 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:13,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:13,540 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:13,546 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:13,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:13,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:13,964 [Thread: 1 org.apache.camel.component.file.FileComponent@2bbe2893] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+2012-12-13 17:25:14,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] DEBUG org.apache.camel.impl.ScheduledPollConsumer - Starting to poll: Endpoint[file://target/subfolder]
+2012-12-13 17:25:14,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Polling directory target/subfolder
+2012-12-13 17:25:14,040 [Thread: 1 org.apache.camel.component.file.FileComponent@23abcc03] TRACE org.apache.camel.component.file.FileConsumer - Skipping directory target/subfolder/.camel
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.752 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 20.061s
+[INFO] Finished at: Thu Dec 13 17:25:14 CET 2012
+[INFO] Final Memory: 12M/108M
+[INFO] ------------------------------------------------------------------------
